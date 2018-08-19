@@ -732,6 +732,8 @@ set_var EASYRSA_PKI        "$EASYRSA/pki"
 set_var EASYRSA_KEY_SIZE   2048
 set_var EASYRSA_ALGO       rsa
 set_var EASYRSA_CURVE      secp384r1
+set_var EASYRSA_DIGEST     "sha512"
+set_var EASYRSA_REQ_CN     "MyIssuer"
 EOF
 
     echo "${String}" | $SUDO tee /etc/openvpn/easy-rsa/vars >/dev/null
